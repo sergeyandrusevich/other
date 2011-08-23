@@ -286,7 +286,6 @@
 
                 case 'defaultValue':
                     this.options.defaultValue = value;
-                    this._setValue(value);
                     break;
 
                 default:
@@ -445,9 +444,7 @@
         _onChange: function(event)
         {
             if (!this._adjustmentFlag && !this._keyDownFlag)
-            {
                 this._setValue(this._getInputValue(event.target.value), true);
-            }
         },
 
         // Gets or sets the numeric value as a JavaScript Number object.
